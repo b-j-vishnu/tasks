@@ -52,6 +52,10 @@ const winningScores = [
         }
         
     })
+      if (!winnerFound && cells.every((cell) => cell !== "")) {
+                        setTimeout(()=>{alert("It's a Draw!")},100)
+
+    }
     }
 
     const handleReset = () => {
@@ -62,7 +66,7 @@ const winningScores = [
     }
   return (
     <div className='w-full h-[92.5vh] flex flex-col justify-center items-center bg-gray-200'>
-    <section className='w-1/4 flex justify-center flex-wrap'>
+    <section className='   grid grid-cols-3 '>
         {
             cells.map((cell,index)=>(
                 <Cell 
