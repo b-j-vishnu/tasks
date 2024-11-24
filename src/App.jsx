@@ -5,6 +5,7 @@ import Currency from "./Components/Currency";
 import Timer from "./Components/Timer";
 import { Routes, Route, Link } from "react-router-dom";
 import WeatherApp from "./Components/WeatherApp";
+import Tic_Tac_Toe from "./Components/Tic_Tac_Toe";
 
 const App = () => {
   return (
@@ -41,6 +42,12 @@ const App = () => {
         >
           Weather
         </Link>
+        <Link
+          className="px-2 py-1 hover:bg-white hover:text-black rounded-md"
+          to="/ticTac"
+        >
+          Tic Tac Toe
+        </Link>
       </nav>
       <Routes>
         <Route path="/clock" element={<Clock />} />
@@ -48,6 +55,7 @@ const App = () => {
         <Route path="/currency" element={<Currency />} />
         <Route path="/timer" element={<Timer />} />
         <Route path="/weather" element={<WeatherApp />} />
+        <Route path="/ticTac" element={<Tic_Tac_Toe />} />
       </Routes>
     </div>
   );
